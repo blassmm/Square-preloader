@@ -1,0 +1,173 @@
+:root {
+    font-size: 16px;             /*    5rem * 16px = 80px  */
+    font-family: "Open Sans";
+  }
+  
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ----------------------------------FIN ESTILOS GENERALES---------------------------------*/
+
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+
+    background: black;
+}
+
+
+.container{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    
+    align-content: center;
+    /* background: yellow; */
+}
+
+.cubo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: solid 1px red; */
+
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotar 8s linear infinite;
+}
+
+.cubo > span{
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    border: 2px solid white;
+    box-shadow: inset 0px 0px 15px 5px rgba(67, 195, 255, .2), 0px 0px 40px 1px rgba(67, 195, 255, .15);
+    border-radius: 4px;
+}
+
+.cubo > span:nth-child(1){transform: rotateY(90deg)translateZ(2em);}
+.cubo > span:nth-child(2){transform: rotateY(90deg)translateZ(-2em);}
+.cubo > span:nth-child(3){transform: rotateY(90deg)translateZ(-2em);}
+.cubo > span:nth-child(4){transform: rotateY(90deg)translateZ(2em);}
+.cubo > span:nth-child(5){transform: translateZ(-2em);}
+.cubo > span:nth-child(6){transform: translateZ(2em);}
+
+@keyframes rotar{
+    0%{
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    50%{
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+    100%{
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+}
+
+/* ----------------------------------FIN CUBO PRELOADER---------------------------------*/
+
+header{
+    opacity: 0;
+    background: url(src/background.png);
+    background-size: cover;
+    height: 100vh;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul{
+    display: flex;
+    padding: 0;
+}
+
+header ul li{
+    margin: 10px 40px;
+}
+
+header ul li a{
+    color: white;
+}
+
+.hero-text{
+    text-align: center;
+    margin-top: 40vh;
+    color: white;
+}
+
+h1{
+    font-size: 80px;
+    font-style: italic;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.hero-text a{
+    background: blueviolet;
+    color: white;
+    padding: 15px 30px;
+}
+
+.logo{
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    width: 200px; 
+    height: 200px;
+}
+
+nav a{
+    font-weight: 600;
+}
+
+nav a:hover{
+    color: yellow;
+}
+
+
+/* ----------------------------------FIN HEADER---------------------------------*/
+
+main{
+    background: red;
+    height: 100vh;
+}
